@@ -3,20 +3,20 @@
 The [maskedquiz.com](https://maskedquiz.com) is a game. An example for how to use [Wapplr](https://github.com/wapplr/wapplr), 
 and a funny game, try it! I made it recently, it’s pretty current!
 
-####How to play
+#### How to play
 
 1. Enter a username, that if you have enough score, you can be there to the high scores. The system automatically generates a funny name if you don't feel like typing your own.
 2. Start the game. Guess who is under the mask. You have a few seconds to answer, so you need to hurry.
 3. If you add a wrong answer or time runs out, you will lose a life. After three wrong answers, the game is over.
 4. Then you can see the high scores, and your results. Here can you restart the game.
 
-##Development
+## Development
 
-###System requirements
+### System requirements
 
 - It is necessary to run the mongodb service
 
-###Start dev server
+### Start dev server
 
 ```shell
 npm maskedquiz start
@@ -42,7 +42,7 @@ npm maskedquiz start
 
 Enjoy your own quiz game :)
 
-###Build and run
+### Build and run
 
 ```shell
 npm maskedquiz build
