@@ -1,0 +1,29 @@
+.about {
+    background-color: var(--bg-color);
+}
+
+.aboutSection {
+    margin-bottom: 32px;
+}
+
+.aboutText{
+    font-family: "Arial", serif;
+    font-weight: bold
+}
+
+.aboutTitle{
+    font-family: var(--font-family-base);
+    font-size: 24px;
+}
+
+.aboutContainer{
+    max-width: 90%;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutSign{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}

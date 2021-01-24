@@ -1,0 +1,41 @@
+{
+    "name": "maskedquiz",
+    "description": "Masked! - The Masked Quiz Game",
+    "license": "MIT",
+    "dependencies": {
+        "wapplr": "^1.0.0",
+        "wapplr-graphql": "^1.0.0",
+        "wapplr-mongo": "^1.0.0",
+        "wapplr-posttypes": "^1.0.0",
+        "wapplr-pwa": "^1.0.0",
+        "wapplr-react": "^1.0.0",
+        "node-fetch": "^2.6.1"
+    },
+    "devDependencies": {
+        "wapplr-cli": "^1.0.0"
+    },
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "browserslist": [
+        ">1%",
+        "last 4 versions",
+        "Firefox ESR",
+        "not ie < 9"
+    ],
+    "scripts": {
+        "maskedquiz start": "wapplr-cli start",
+        "maskedquiz build": "wapplr-cli build",
+        "maskedquiz clean": "wapplr-cli clean"
+    },
+    "version": "1.0.0",
+    "main": "dist/server",
+    "browser": "dist/client",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/c4rc0/maskedquiz.git"
+    },
+    "files": [
+        "dist/*"
+    ]
+}

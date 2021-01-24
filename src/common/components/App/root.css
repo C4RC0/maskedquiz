@@ -1,0 +1,28 @@
+:root {
+    --font-family-base: "Bowlby One SC", serif;
+    --bg-color: #ffffff;
+    --font-color: #000000;
+    --secondary-color: #03A9F4;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --font-family-base: "Bowlby One SC", serif;
+        --bg-color: #282828;
+        --font-color: #ffffff;
+        --secondary-color: #03A9F4;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    :root {
+        --font-family-base: "Bowlby One SC", serif;
+        --bg-color: #ffffff;
+        --font-color: #000000;
+        --secondary-color: #03A9F4;
+    }
+
+}

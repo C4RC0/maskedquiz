@@ -1,0 +1,84 @@
+.highScores{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-family: var(--font-family-base);
+}
+
+.highScoresYourScoreTitle{
+    font-size: 24px;
+    text-align: center;
+    padding: 8px;
+    color: var(--secondary-color);
+}
+
+.highScoresYourScore{
+    text-align: center;
+    font-size: 48px;
+    color: var(--secondary-color);
+}
+
+.highScoresTitle {
+    font-size: 24px;
+    text-align: center;
+    padding: 8px;
+    color: var(--secondary-color);
+    margin-top: 32px;
+}
+
+.highScoresTable{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.highScoresRow{
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.highScoresRow > span {
+    padding: 8px;
+}
+
+.hsRank{}
+
+.hsUser{}
+
+.hsScore{}
+
+.backToTheHome{
+    display: flex;
+    padding: 12px;
+    position: fixed;
+    width: 100%;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+
+    .highScoresYourScoreTitle{
+        font-size: 18px;
+    }
+
+    .highScoresYourScore{
+        font-size: 32px;
+    }
+
+    .highScoresTitle {
+        font-size: 18px;
+    }
+
+    .highScoresRow > span {
+        padding: 2px;
+    }
+}

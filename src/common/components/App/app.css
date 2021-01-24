@@ -1,0 +1,48 @@
+@import "./root.css";
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.app {
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: var(--font-color);
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (orientation: portrait) {
+    .app {
+        max-width: 100vh;
+    }
+}
+
+.sections {}
+
+.section {
+    min-height: calc(100vh - 64px);
+    position: relative;
+    display: block;
+}
+
+.home {
+    background-color: var(--bg-color);
+}
+
+.about {
+    background-color: var(--bg-color);
+}
+
+.highScores{
+    background-color: var(--bg-color);
+}

@@ -1,0 +1,15 @@
+.logContainer{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 8px;
+    font-size: 10px;
+    max-height: 120px;
+    overflow: hidden;
+    overflow-y: auto;
+    max-width: 50%;
+}
+
+.logRow{}

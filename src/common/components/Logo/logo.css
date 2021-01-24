@@ -1,0 +1,84 @@
+.logo, .logo a {
+    height: 100%;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    transform: translateX(0);
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.icon {
+    height: 90%;
+    width: auto;
+}
+
+.svg {
+    height: 100%;
+    width: auto;
+    display: flex;
+    max-width: 100%;
+}
+
+.subtext {
+    fill: var(--font-color);
+}
+
+.subtext, .stroke, .text {
+    fill-rule: evenodd;
+}
+
+.stroke {
+    fill: #3d3c33;
+}
+
+.text {
+    fill: var(--secondary-color);
+}
+
+.default {}
+
+.oneLine .subtext{
+    display: none;
+}
+
+.oneLine .masked{
+    transform: translate(0, 40px);
+}
+
+.animation .masked {
+    transform-origin: center;
+    transform: scale(0,0);
+    animation: startScaleForMasked;
+    animation-delay: 500ms;
+    animation-duration: 650ms;
+    animation-fill-mode: forwards;
+}
+
+.animation .subtext {
+    transform-origin: center;
+    transform: scale(0,0);
+    animation: startScaleForSubtext;
+    animation-delay: 1150ms;
+    animation-duration: 650ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes startScaleForMasked {
+    0%   {transform: scale(0,0)}
+    60%  {transform: scale(1.02,1.02)}
+    100%  {transform: scale(1,1)}
+}
+
+@keyframes startScaleForSubtext {
+    0%   {transform: scale(0,0)}
+    60%  {transform: scale(1.02,1.02)}
+    100%  {transform: scale(1,1)}
+}
+
+.hidden {
+    transform: translateX(-5000px);
+}

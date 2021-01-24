@@ -1,0 +1,209 @@
+.game{}
+
+button.gameButton, div.gameButton, a.gameButton{
+    background-color: #3d3c33;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: normal;
+    font-family: var(--font-family-base);
+}
+
+.startScreen {
+    height: calc(100vh - 64px);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.homeLogo{
+    height: 196px;
+    padding: 16px;
+}
+
+/*form style*/
+
+.homeForm {
+    transform: translateY(5000px);
+    animation: startSwipeFromBottomForForm;
+    animation-delay: 1300ms;
+    animation-duration: 650ms;
+    animation-fill-mode: forwards;
+}
+
+.homeFormWithoutAnim {
+    transform: translateY(0)
+}
+
+@keyframes startSwipeFromBottomForForm {
+    0%   {transform: translateY(5000px)}
+    60%  {transform: translateY(-20px)}
+    100%  {transform: translateY(0)}
+}
+
+.form {
+    max-width: 640px;
+    margin: 32px auto;
+    padding: 8px;
+}
+
+.form > div{
+    width: 100%;
+}
+
+.form > div.inlineBlock {
+    width: auto;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 0;
+}
+
+.form input, .form select, .form textarea, .form > div div{
+    width: 100%;
+}
+
+/*input style*/
+
+.group {
+    position:relative;
+    margin-bottom:45px;
+}
+
+.group input, .group select {
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width: 100%;
+    border:none;
+    border-bottom:1px solid #000000;
+}
+.group input:focus, .group select:focus { outline:none; }
+
+.group label 				 {
+    color: #000000;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    bottom: 0;
+    transition:0.2s ease all;
+}
+
+.group input:focus ~ label, .group input:valid ~ label, .group select:focus ~ label, .group select:valid ~ label {
+    bottom: 100%;
+    font-size:14px;
+    color: #000000;
+    background-color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-bottom: 8px;
+}
+
+.inlineBlock input:focus ~ label, .inlineBlock input:valid ~ label, .inlineBlock select:focus ~ label, .inlineBlock select:valid ~ label{
+    left: 0;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 0;
+}
+
+.group .bar { position:relative; display:block; width: 100%; }
+.group .bar:before, .group .bar:after {
+    content:"";
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background: #000000;
+    transition:0.2s ease all;
+}
+.group .bar:before {
+    left:50%;
+}
+.group .bar:after {
+    right:50%;
+}
+
+.group input:focus ~ .bar:before, .group input:focus ~ .bar:after, .group select:focus ~ .bar:before, .group select:focus ~ .bar:after {
+    width:50%;
+}
+
+.group .highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+.group input:focus ~ .highlight, .group select:focus ~ .highlight {
+    animation:inputHighlighter 0.3s ease;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus{
+    -webkit-text-fill-color: #000000!important;
+    color: #000000!important;
+    background-color: #ffffff!important;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+
+}
+
+.group label.errorLabel{
+    color: red!important;
+}
+
+@keyframes inputHighlighter {
+    from { background: #000000; }
+    to 	{ width:0; background:transparent; }
+}
+
+@media (max-width: 640px) {
+    .form > div.inlineBlock {
+        width: 100%;
+        display: block;
+    }
+    .form .gameButton{
+        width: 100%;
+    }
+}
+
+/*quiz*/
+
+.score {
+    padding: 8px;
+    display: inline-block;
+    line-height: 24px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+/*lives*/
+
+.lives{
+    display: inline-flex;
+    padding: 8px;
+    overflow: hidden;
+    vertical-align: middle;
+    float: right;
+}
+
+.liveIcon{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.heartIcon{
+    fill: var(--secondary-color)
+}

@@ -1,0 +1,185 @@
+.quizStep {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.quizStep img{
+    visibility: hidden;
+    width: 100%;
+    height: auto;
+    max-height: calc(100vh - 364px);
+}
+
+@media (max-width: 640px) {
+    .quizStep img{
+        max-height: calc(100vh - 364px);
+    }
+}
+
+.imageContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.scaleContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: scale(1);
+    transform-origin: left top;
+}
+
+.maskContainer {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,-50%) scale(1);
+    transform-origin: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.maskContainer.end {
+    animation: maskAnimation;
+    animation-delay: 0ms;
+    animation-duration: 650ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes maskAnimation{
+    0%   { transform: translate(0%, 0%) rotate(0deg) }
+    30%  { transform: translate(-50%, -50%) rotate(360deg); left: 50%; top: 50% }
+    70%  { transform: translate(-50%, -50%) rotate(360deg); left: 50%; top: 50% }
+    100% { transform: translate(-50%, -50%) rotate(720deg); left: -200%; top: 50% }
+}
+
+.maskContainer > div {
+    transform-origin: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.buttons {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--secondary-color);
+    padding: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons > div {
+    width: auto;
+    padding: 8px;
+    position: relative;
+}
+
+.buttons > div > div {
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+    padding: 8px;
+}
+
+.buttons > div > div:hover{
+    box-shadow: 0 0 10px #ffffff;
+}
+
+@media (max-width: 640px) {
+    .buttons > div > div{
+        font-size: 14px;
+    }
+}
+
+div.rightValue {
+    background-color: #146b3a;
+}
+
+.disabled {
+    cursor: default;
+}
+
+.buttons > div > div.disabled:hover {
+    box-shadow: none;
+}
+
+.buttons > div > div.selected, .buttons > div > div.selected:hover {
+    box-shadow: 0 0 10px #ffffff;
+}
+
+.buttons > div > svg{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
+    transform: translate(0, 100%);
+    bottom: 100%;
+    right: 0;
+    fill: white;
+    padding: 3px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff;
+    background-color: #3d3c33;
+}
+
+.buttons > div > svg.wrong {
+    background-color: #ea4630;
+}
+
+.buttons > div > svg.right {
+    background-color: #146b3a;
+}
+
+/*timeline*/
+
+.timeline {
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-color);
+    visibility: hidden;
+}
+
+.timeline_start {
+    visibility: visible;
+    animation-play-state: running;
+    animation: timelineAnimation;
+    animation-delay: 0ms;
+    animation-duration: 10000ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+.timeline_stop {
+    animation-play-state: paused;
+}
+
+.timeline_paused {
+    animation-play-state: paused;
+}
+
+.timeline_resume {
+    animation-play-state: running;
+}
+
+@keyframes timelineAnimation{
+    0%   { width: 100% }
+    100% { width: 0 }
+}
