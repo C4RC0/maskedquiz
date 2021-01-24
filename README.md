@@ -18,7 +18,7 @@ and a funny game, try it! I made it recently, it’s pretty current!
 
 ### Start dev server
 
-```shell
+```sh
 npm maskedquiz start
 ```
 
@@ -44,7 +44,7 @@ Enjoy your own quiz game :)
 
 ### Build and run
 
-```shell
+```sh
 npm maskedquiz build
 node run/server.js
 ```
