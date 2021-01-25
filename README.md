@@ -10,6 +10,16 @@ and a funny game, try it! I made it recently, it’s pretty current!
 3. If you add a wrong answer or time runs out, you will lose a life. After three wrong answers, the game is over.
 4. Then you can see the high scores, and your results. Here can you restart the game.
 
+#### Features
+
+- PWA Progressive Web App
+- Dark mode
+- Game saveing to the local storage
+- Time is pausing if the window is inactive
+- High scores saving to the local storage and to the server
+- Funny username generating
+- 98-100% Google [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fmaskedquiz.com%2F)
+
 ## Development
 
 ### System requirements
