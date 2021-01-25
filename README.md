@@ -19,7 +19,7 @@ and a funny game, try it! I made it recently, it’s pretty current!
 ### Start dev server
 
 ```sh
-npm maskedquiz start
+npm run "maskedquiz start"
 ```
 
 - add new name in package.json
@@ -45,7 +45,7 @@ Enjoy your own quiz game :)
 ### Build and run
 
 ```sh
-npm maskedquiz build
+npm run "maskedquiz build"
 node run/server.js
 ```
 
