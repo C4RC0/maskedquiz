@@ -28,7 +28,7 @@
         "maskedquiz build": "wapplr-cli build",
         "maskedquiz clean": "wapplr-cli clean"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/server",
     "browser": "dist/client",
     "repository": {

@@ -48,14 +48,6 @@ export default async function createServer(p = {}) {
     const {config} = getConfig(p);
     const wapp = p.wapp || wapplrServer({...p, config});
 
-    wapp.requests.requestManager.fetch = async function (urlString, options) {
-        const absoluteUrl = (!url.parse(urlString).hostname) ?
-            wapp.request.protocol + "//" + wapp.request.hostname + urlString :
-            urlString;
-
-        return await nodeFetch(absoluteUrl, options);
-    };
-
     wapplrMongo({wapp, ...p, config});
     wapplrPosttypes({wapp, ...p, config});
     wapplrReact({wapp, ...p, config});
@@ -79,6 +71,15 @@ export async function createMiddleware(p = {}) {
     const {config} = getConfig(p);
     const wapp = p.wapp || await createServer({...p, config});
     return [
+        function createFetch(req, res, next) {
+            wapp.requests.requestManager.fetch = async function (urlString, options) {
+                const absoluteUrl = (!url.parse(urlString).hostname) ?
+                    req.wappRequest.protocol + "://" + req.wappRequest.hostname + urlString :
+                    urlString;
+                return await nodeFetch(absoluteUrl, options);
+            };
+            next();
+        },
         createWapplrGraphqlMiddleware({wapp, ...p}),
     ]
 
